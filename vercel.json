@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/main.js" },
+    { "src": "/login", "dest": "/main.js" },
+    { "src": "/register", "dest": "/main.js" },
+    { "src": "/dashboard", "dest": "/main.js" },
+    { "src": "/avatar/(.*)", "dest": "/main.js" },
+    { "src": "/(.*)", "dest": "/main.js" }
+  ]
+}
